@@ -9,7 +9,7 @@
   </head>
   <h1>Form</h1>
   <body>
-    <form class="form" id="form">
+    <form class="form" id="form" name="form">
       <h3>Your Question:</h3>
       <textarea
         name="questionbox"
@@ -17,9 +17,10 @@
         class="form-control"
         rows="10"
         cols="60"
+        placeholder="Please place your question here."
       ></textarea>
       <span id="char_count">100/100</span>
-      <button type="submit">Save</button>
+
       <br />
       <br />
       <br />
@@ -27,11 +28,14 @@
       <br />
       <br />
       <br />
-      <textarea id="textareaAnswer">Your Answer</textarea>
+      <textarea id="textareaAnswer" rows="10" cols="60" name="answerbox">
+Your Answer</textarea
+      >
       <br />
-      <input type="text" placeholder="Your tags" />
+      <input name="tags" type="text" id="tags" placeholder="Your tags" />
       <br />
-      <button>Submit</button>
+      <button name="button" id="button">Submit</button>
     </form>
+    <ol id="list" class="list"></ol>
   </body>
 </html>

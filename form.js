@@ -15,12 +15,16 @@ textArea.addEventListener("input", countCharacters);
 
 // 3. Create new Cards
 
-const form = document.querySelector("textbox");
+const form = document.getElementById("form");
+
+const newContainer = document.getElementById("list");
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault;
-  const currentForm = event.target;
-
+  event.preventDefault();
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
+  const card1 = document.createElement("li");
+  card1.textContent = data.questionbox;
+  newContainer.append(card1);
+  console.log(data);
 });
